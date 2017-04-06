@@ -3,7 +3,7 @@ package com.generic.ch05;
 /**
  * Created by nckwon on 2017. 4. 3..
  */
-public class Cient {
+public class Client {
     public static void main(String[] args) {
         Stack stack = new ArrayStack();
         for (int i=0; i<4; i++)
