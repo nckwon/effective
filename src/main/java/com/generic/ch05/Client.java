@@ -1,5 +1,7 @@
 package com.generic.ch05;
 
+import com.effective.ch02.NutrionFacts;
+
 /**
  * Created by nckwon on 2017. 4. 3..
  */
@@ -17,6 +19,11 @@ public class Client {
         Stack reverse = Stacks.reverse(stack);
         assert stack.empty();
         assert reverse.toString().equals("stack[2, 1, 0]");
+
+        Class<Integer> ki = Integer.class;
+        Number n = new Integer(42);
+        Class<? extends Number> kn = n.getClass();
+        assert ki != kn;
 
     }
 }

@@ -1,6 +1,9 @@
 package com.generic.ch04;
 
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -25,4 +28,13 @@ public class Cell2<T> {
         return values;
     }
 
+    public static <T> List<T> asList(Collection<T> collection) {
+        if (collection instanceof List<?>) {
+            return (List<T>) collection;
+        }
+        else {
+            String[] errors = new String[] {"", ""};
+            throw new IllegalArgumentException("");
+        }
+    }
 }
